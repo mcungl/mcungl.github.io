@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>JS message</title>
+    <script>
+
+    window.addEventListener('message', (m,e) => {console.log(m)})
+
+      function test() {
+
+        window.top.postMessage("asd");
+
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.messageHandler) {
+            window.webkit.messageHandlers.messageHandler.postMessage({"message":"test"});
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <p onclick="test()">Test</p>
+  </body>
+</html>
