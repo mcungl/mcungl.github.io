@@ -12,9 +12,9 @@
 
         window.top.postMessage("asd");
 
-        // if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.messageHandler) {
-        //     window.webkit.messageHandlers.messageHandler.postMessage({"message":"test"});
-        // }
+         if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.messageHandler) {
+            window.webkit.messageHandlers.messageHandler.postMessage({"message":"test"});
+        }
       }
 
     </script>
