@@ -9,12 +9,7 @@
     window.addEventListener('message', (e) => {console.log("web event")})
 
       function test() {
-
-        window.top.postMessage("asd");
-
-         if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.messageHandler) {
-            window.webkit.messageHandlers.messageHandler.postMessage({"message":"test"});
-        }
+        window.postMessage("asd");
       }
 
     </script>
