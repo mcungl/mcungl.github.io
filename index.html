@@ -6,7 +6,7 @@
     <title>JS message</title>
     <script>
 
-    window.addEventListener('message', (e) => {console.log("web event")})
+    window.addEventListener('message', (m,e) => {console.log(m)})
 
       function test() {
         window.postMessage("asd");
